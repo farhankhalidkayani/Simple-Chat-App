@@ -1,6 +1,7 @@
 const express = require("express");
 const path = require("path");
 const mongoose = require("mongoose");
+const Chat = require("./models/chat");
 
 main()
   .then((res) => {
@@ -24,7 +25,11 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 app.get("/", (req, res) => {
-  res.send("Server Working");
+  res.render("welcome.ejs");
+});
+app.get("/chats", async (req, res) => {
+  const chats = await Chat.find();
+  res.render("chats.ejs", { chats });
 });
 
 app.listen(3000);
