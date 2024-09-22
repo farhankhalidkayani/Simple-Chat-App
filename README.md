@@ -1,5 +1,5 @@
 
-```md
+
 # Chat Application
 
 A simple chat application built using **Node.js**, **Express**, **MongoDB**, and **EJS**. This app allows users to create, view, edit, and delete chat messages between users. It's designed as a small-scale project to demonstrate full-stack development with a focus on the backend and server-side rendering.
@@ -94,5 +94,5 @@ To run this project, you need to have the following installed:
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-```
+
 
