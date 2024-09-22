@@ -10,7 +10,6 @@ A simple chat application built using **Node.js**, **Express**, **MongoDB**, and
 - [Technologies Used](#technologies-used)
 - [Getting Started](#getting-started)
 - [Usage](#usage)
-- [Screenshots](#screenshots)
 - [License](#license)
 
 ## Features
