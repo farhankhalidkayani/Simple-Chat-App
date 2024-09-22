@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat Details</title>
+    <link rel="stylesheet" href="/chat.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Chat Details</h1>
+    </header>
+
+    <main>
+      <div class="chat-details">
+        <div class="chat-field"><strong>ID:</strong> <%= chat._id %></div>
+        <div class="chat-field"><strong>From:</strong> <%= chat.from %></div>
+        <div class="chat-field"><strong>To:</strong> <%= chat.to %></div>
+        <div class="chat-field">
+          <strong>Message:</strong> <%= chat.message %>
+        </div>
+        <div class="chat-field">
+          <strong>Sent At:</strong> <%= new
+          Date(chat.createdAt).toLocaleString() %>
+        </div>
+
+        <div class="actions">
+          <a href="/chats" class="btn">Back to Chats</a>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>
+        &copy; <%= new Date().getFullYear() %> Chat Application. All rights
+        reserved.
+      </p>
+    </footer>
+  </body>
+</html>

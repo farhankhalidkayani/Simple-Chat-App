@@ -4,8 +4,28 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Welcome</title>
+    <link rel="stylesheet" href="/welcome.css" />
   </head>
   <body>
-    <h1>Welcome to our chat app</h1>
+    <header>
+      <h1>Welcome to Our Chat App</h1>
+    </header>
+
+    <main>
+      <div class="welcome-message">
+        <p>
+          Start chatting with your friends and colleagues. Click the button
+          below to view all chats.
+        </p>
+        <a href="/chats" class="btn primary">Access Chats</a>
+      </div>
+    </main>
+
+    <footer>
+      <p>
+        &copy; <%= new Date().getFullYear() %> Chat Application. All rights
+        reserved.
+      </p>
+    </footer>
   </body>
 </html>

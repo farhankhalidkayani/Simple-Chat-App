@@ -3,13 +3,54 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>All chats</title>
+    <title>All Chats</title>
+    <link rel="stylesheet" href="/chats.css" />
   </head>
   <body>
-    <% for( chat of chats){ %>
-    <h2>From: <%= chat.from %></h2>
-    <h2>To: <%= chat.to %></h2>
-    <h2>Message: <%= chat.message %></h2>
-    <% } %>
+    <header>
+      <h1>Chat Application</h1>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/chats/new" class="btn primary">New Chat</a>
+      </nav>
+    </header>
+
+    <main>
+      <div class="chat-container">
+        <% if (chats.length === 0) { %>
+        <p>No chats available. <a href="/chats/new">Create one!</a></p>
+        <% } else { %> <% chats.forEach(chat => { %>
+        <div class="chat-card">
+          <div class="chat-info">
+            <p><strong>From:</strong> <%= chat.from %></p>
+            <p><strong>To:</strong> <%= chat.to %></p>
+            <p><strong>Message:</strong> <%= chat.message %></p>
+            <p>
+              <strong>Created At:</strong> <%= chat.createdAt.toLocaleString()
+              %>
+            </p>
+          </div>
+          <div class="chat-actions">
+            <a href="/chats/<%= chat._id %>" class="btn">More Info</a>
+            <a href="/chats/<%= chat._id %>/edit" class="btn">Edit</a>
+            <form
+              action="/chats/<%= chat._id %>?_method=DELETE"
+              method="POST"
+              class="delete-form"
+            >
+              <button type="submit" class="btn danger">Delete</button>
+            </form>
+          </div>
+        </div>
+        <% }) %> <% } %>
+      </div>
+    </main>
+
+    <footer>
+      <p>
+        &copy; <%= new Date().getFullYear() %> Chat Application. All rights
+        reserved.
+      </p>
+    </footer>
   </body>
 </html>

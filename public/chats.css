@@ -1,0 +1,119 @@
+/* Reset some basic elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header Styling */
+header {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  margin-bottom: 10px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
+  padding: 8px 16px;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #fff;
+  color: #4caf50;
+}
+
+/* Main Content Styling */
+.chat-container {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto 40px auto;
+}
+
+.chat-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.chat-info p {
+  margin-bottom: 10px;
+}
+
+.chat-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 8px 12px;
+  background-color: #4caf50;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: center;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+.btn.primary {
+  background-color: #008cba;
+}
+
+.btn.primary:hover {
+  background-color: #007bb5;
+}
+
+.btn.danger {
+  background-color: #f44336;
+}
+
+.btn.danger:hover {
+  background-color: #da190b;
+}
+
+.delete-form {
+  display: inline;
+}
+
+.delete-form button {
+  padding: 8px 12px;
+}
+
+/* Footer Styling */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
