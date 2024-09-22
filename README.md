@@ -25,7 +25,11 @@ A simple chat application built using **Node.js**, **Express**, **MongoDB**, and
  ┣ 📂models
  ┃ ┗ 📜chat.js        # Mongoose model for Chat
  ┣ 📂public           # Static files like CSS, images, etc.
- ┃ ┗ 📜styles.css     # CSS file for styling
+ ┃ ┣ 📜welcome.css    # Welcome page css
+ ┃ ┣ 📜chats.css      # View all chats css
+ ┃ ┣ 📜newForm.css    # Create a new chat css
+ ┃ ┣ 📜edit.css       # Edit a chat css
+ ┃ ┗ 📜chat.css       # View chat details css
  ┣ 📂views            # EJS templates
  ┃ ┣ 📜welcome.ejs    # Welcome page
  ┃ ┣ 📜chats.ejs      # View all chats
